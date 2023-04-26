@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="astar.css">
+    <meta charset="UTF-8">
+    <title>А* </title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col center">
+
+            <div class="controls">
+
+                <div class="radio">
+                    <input type="radio" id="addWall" name="action" value="addWall" checked>
+                    <label for="addWall">Добавить стену</label><br>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" id="removeWall" name="action" value="removeWall">
+                    <label for="removeWall">Очистить</label><br>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" id="addStart" name="action" value="addStart">
+                    <label for="addStart">Добавить начало</label><br>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" id="addEnd" name="action" value="addEnd">
+                    <label for="addEnd">Добавить конец</label><br>
+                </div>
+
+                <button type="button" class="btn btn-default" id="clear">REстарт</button>
+                <button type="button" class="btn btn-default" id="run">Старт</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+
+        <div class="col center">
+            <table id="table">
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</body>
+
+
+<script src="astar.js"></script>
+<script src="fillTable.js"></script>
+
+
+</html>

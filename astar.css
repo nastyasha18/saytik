@@ -1,0 +1,70 @@
+.btn{
+    margin: 5px;
+}
+
+
+body {
+    background-color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+
+#table tr td {
+    width: 13px;
+    height: 13px;
+    border: 1px solid black;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    background-color: rgb(161, 121, 203);
+}
+
+.stop{
+    flex: none;
+}
+
+.radio {
+    flex-direction: column;
+    align-items: center;
+    margin:   auto 10px auto 10px;
+}
+
+
+table td{
+    
+    background-color: black;
+}
+
+.wall{ 
+    background-color: #b4af50;
+}
+
+.metal{
+    background-color:#d273d2;
+}
+
+.start{
+    background-color: pink;
+}
+
+.end{
+    background-color: rgb(0, 217, 255);
+}
+
+.open {
+    background: #679067;
+}
+
+.closed {
+    background: #323232;
+}
+
+.path {
+    background: rgb(58, 204, 50);
+} 
