@@ -102,3 +102,12 @@ clusterButton.onclick = () =>
 canvas.addEventListener('click', addPoint);
 
 drawPoints();
+
+const resetButton = document.getElementById('resetButton'); // Получаем кнопку для сброса точек
+
+// Обработчик клика на кнопке "Reset"
+resetButton.onclick = () => 
+{
+  points = []; // Очищаем массив точек
+  drawPoints(); // Перерисовываем точки на холсте
+};
