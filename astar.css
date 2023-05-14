@@ -45,10 +45,6 @@ table td{
     background-color: #b4af50;
 }
 
-/* .metal{
-    background-color:#db26db;
-} */
-
 .start{
     background-color: pink;
 }
@@ -58,7 +54,7 @@ table td{
 }
 
 .open {
-    background: #679067;
+    background: #000000;
 }
 
 .closed {
