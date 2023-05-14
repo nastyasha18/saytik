@@ -1,10 +1,11 @@
+//Объявление переменных, которые будут хранить ссылки на элементы HTML-кода страницы
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const clusterButton = document.getElementById('clusterButton');
 const resetButton = document.getElementById('resetButton');
 
-let points = [];
-let clusters = [];
+let points = []; // Переменная points - это массив, который будет содержать точки, которые нужно будет кластеризовать.
+let clusters = []; // Переменная clusters - это массив, который будет содержать кластеры точек после их кластеризации.
 
 // Количество кластеров
 const k = 3;
@@ -17,18 +18,28 @@ function addPoint(event)
 
   points.push({ x, y });
   drawPoints();
-}
 
-function drawPoints() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = '#000';
+  /*Эта функция вызывается при клике на холсте, добавляя новую точку в массив points. Изначально она получает координаты 
+клика относительно холста, используя метод getBoundingClientRect(он возвращает размеры и позицию элемента 
+относительно окна просмотра). Затем функция создает новый объект точки с координатами x и y и добавляет его в массив 
+points с помощью метода push(). После этого функция вызывает функцию drawPoints(), которая перерисовывает все точки 
+на холсте, включая новую добавленную точку.*/
 
+} 
+
+// Эта функция перерисовывает все точки на холсте.
+function drawPoints() 
+{
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Очищение холста 
+  ctx.fillStyle = '#000'; //установка цвета заливки для точки
+
+  // Перебор всех точек в массиве points, создание нового пути для каждой точки 
   for (let i = 0; i < points.length; i++) {
     ctx.beginPath();
     ctx.arc(points[i].x, points[i].y, 5, 0, Math.PI * 2);
     ctx.fill();
   }
-}
+} /*( Здесь функция рисует круг с помощью метода arc, который принимает координаты центра кругас*/
 
 function clusterPoints() {
   // Случайным образом выбираем начальные центры кластеров
@@ -79,7 +90,7 @@ function clusterPoints() {
     // Отображение кластеров на холсте
     for (let i = 0; i < clusters.length; i++) {
       const color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
-      ctx.fillStyle = color;
+      ctx.fillStyle = color; // установка цвета заливки для точек
       ctx.beginPath();
       ctx.arc(clusters[i].center0).toString(16).padStart(6, '0');
       ctx.fillStyle = color;
@@ -104,7 +115,9 @@ function clusterPoints() {
         ctx.arc(newCenter.x, newCenter.y, 10, 0, Math.PI * 2);
         ctx.fill();
       }
-    }
+    } /*в этой функции в цикле происходит перебор всех точек в массиве points, и для каждой точки создается 
+    новый путь с помощью метода beginPath(). Затем функция рисует круг с помощью метода arc(), который принимает 
+    координаты центра круга. После этого функция закрашивает круг с помощью метода fill()*/
   }
 
   // Отображение кластеров на холсте
@@ -127,12 +140,20 @@ function clusterPoints() {
     ctx.fill();
   }
 }
+
+// Сброс всех точек и кластеров
 function resetPoints() {
-  points = [];
-  clusters = [];
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  points = []; // Установка массива points в пустой массив 
+  clusters = []; // установка массива clusters в пустой массив.
+  ctx.clearRect(0, 0, canvas.width, canvas.height); //очистка и перерисовка холста.
 }
 
-canvas.addEventListener('click', addPoint);
-clusterButton.addEventListener('click', clusterPoints);
-resetButton.addEventListener('click', resetPoints);
+// важные функции кода
+canvas.addEventListener('click', addPoint); /* Функция вызывается при клике на холсте и добавляет новую 
+точку в массив points.*/
+
+clusterButton.addEventListener('click', clusterPoints); /* Функция вызывается при нажатии на кнопку 
+"Кластеризовать" и кластеризует точки.*/
+
+resetButton.addEventListener('click', resetPoints); /* Функция вызывается при нажатии на кнопку "Сбросить"
+ и сбрасывает все точки и кластеры, очищает холст и перерисовывает его.*/
