@@ -6,16 +6,62 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A* bonus</title>
+  <style>
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: hsl(207, 52%, 76%);
+      height: 50px;
+      margin: 0;
+    }
+  
+    nav ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    nav li {
+      margin: 0 10px;
+    }
+  
+    nav a {
+      display: flex;
+      align-items: center;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0 10px;
+      height: 100%;
+      transition: background-color 0.5s;
+    }
+  
+    nav a:hover {
+      background-color: #555;
+    }
+  </style>
 
   <link rel="stylesheet" href="astarb.css">
 </head>
 
 <body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="base.html">База</a></li>
+      <li><a href="bonus.html">Бонус</a></li>
+      <li><a href="astar.html">A*</a></li>
+      <li><a href="clusterButton.html">Кластеризация</a></li>
+      <li><a href="gin.html">Генетический алгоритм</a></li>
+      <li><a href="astarb.html">A* Бонус</a></li>
+    </ul>
+  </nav>
   <div id="container">
 
     <div class="generate-board">
-      <h2>A* бонус</h2>
-      <h5>(x-ширина; y-длина)</h5>
+      <h3>A* bonus</h3>
       <div>
         <label for="x-length">
           X  (max 30, min 2)

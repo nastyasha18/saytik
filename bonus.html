@@ -7,6 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бонус</title>
     <style>
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: hsl(207, 52%, 76%);
+        height: 50px;
+        margin: 0;
+      }
+    
+      nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    
+      nav li {
+        margin: 0 10px;
+      }
+    
+      nav a {
+        display: flex;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0 10px;
+        height: 100%;
+        transition: background-color 0.5s;
+      }
+    
+      nav a:hover {
+        background-color: #555;
+          }
         h1 
         {
             text-align: center;
@@ -14,9 +48,23 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="base.html">База</a></li>
+            <li><a href="bonus.html">Бонус</a></li>
+            <li><a href="astar.html">A*</a></li>
+            <li><a href="clusterButton.html">Кластеризация</a></li>
+            <li><a href="gin.html">Генетический алгоритм</a></li>
+            <li><a href="astarb.html">A* Бонус</a></li>
+        </ul>
+    </nav>
+    
     <h1>Здесь будут окна для решения алгоритмов бонусного уровня</h1>
     <div>
-        <p> <h2> A* </h2><p>
+        <ul> 
+          <li><p><h2><a href="astarb.html">A*</a></h2><p></p></li>
+        </ul>   
     </div>
 </body>
 </html>
