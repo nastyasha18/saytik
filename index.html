@@ -8,25 +8,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор</title>
     <style>
-      h1 {
-          text-align: center;
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: hsl(207, 52%, 76%);
+        height: 50px;
+        margin: 0;
       }
-  </style>
+    
+      nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    
+      nav li {
+        margin: 0 10px;
+      }
+    
+      nav a {
+        display: flex;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0 10px;
+        height: 100%;
+        transition: background-color 0.5s;
+      }
+    
+      nav a:hover {
+        background-color: #555;
+      }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <header> 
+  <nav>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="base.html">База</a></li>
+        <li><a href="bonus.html">Бонус</a></li>
+        <li><a href="astar.html">A*</a></li>
+        <li><a href="clusterButton.html">Кластеризация</a></li>
+        <li><a href="gin.html">Генетический алгоритм</a></li>
+        <li><a href="astarb.html">A* Бонус</a></li>
+    </ul>
+</nav>
+<header> 
     <h1> Калькулятор нескольких алгоритмов</h1>
     <p>Данный калькулятор поможет вам решить несколько алгоритмов. Он скоротает ваше время и облегчит решение каких либо задач.</p>
-  </header>
-      <div> 
-        <h2>Выбор варианта</h2>
-        <p><h3>Здесь вы можете выбрать базовый и бонусный варианты</h3></p>
-        <nav>
-          <ul>
-            <li><h3><a href="base.html" target ="_blank">Базовый варинт</h3></a></li>
-            <li><h3><a href="bonus.html" target ="_blank">Бонусный вариант</h3></a></li>
-          </ul>
-        </nav>
-      </div>
+</header>
+<div> 
+  <h2>Выбор варианта</h2>
+  <p><h3>Здесь вы можете выбрать базовый и бонусный варианты</h3></p>
+  <ul >
+      <li><h3><a href="base.html">Базовый вариант</a></h3></li>
+      <li><h3><a href="bonus.html">Бонусный вариант</a></h3></li>
+  </ul>
+</div>
+</div>
 </body>
 </html>
