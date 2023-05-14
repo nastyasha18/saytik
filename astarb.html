@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A* bonus</title>
+
+  <link rel="stylesheet" href="astarb.css">
+</head>
+
+<body>
+  <div id="container">
+
+    <div class="generate-board">
+      <h2>A* бонус</h2>
+      <h5>(x-ширина; y-длина)</h5>
+      <div>
+        <label for="x-length">
+          X  (max 30, min 2)
+          <input type="number" id="x-length" max="30">
+        </label>
+        <label for="y-length">
+          Y  (max 30, min 2)
+          <input type="number" id="y-length">
+        </label>
+        <button id="btn-generate">Генерация лабиринта</button>
+      </div>
+    </div>
+
+    <div class="info-wrapper">
+      <div id="start-info" class="info start-info" title="You can press 's' or 'S' key">
+        <div class="wrapper">
+          <div class="color"></div>
+          <div>Старт</div>
+        </div>
+      </div>
+      <div id="end-info" class="info end-info" title="You can press 'e' or 'E' key">
+        <div class="wrapper">
+          <div class="color"></div>
+          <div>Конец</div>
+        </div>
+      </div>
+      <div id="draw-wall" class="info draw-wall-info" title="You can press 'w' or 'W' key">
+        <div class="wrapper">
+          <div class="color"></div>
+          <div>Стена</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <div><button id="start" title="You can press Enter">Начать</button></div>
+      <div><button id="clear" title="You can press 'c' or 'C' key">Очистить</button></div>
+    </div>
+
+    <div id="board"></div>
+  </div>
+  <script src="astarb.js"></script>
+</body>
+
+</html>
