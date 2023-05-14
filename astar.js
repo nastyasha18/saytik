@@ -1,14 +1,15 @@
-let TABLE_WIDTH = prompt("Введите ширину таблицы (не более 100):");
-while (TABLE_WIDTH > 100) 
+let TABLE_WIDTH = parseInt(prompt("Введите ширину таблицы (не более 100):"));
+while (isNaN(TABLE_WIDTH) || TABLE_WIDTH > 100)
 {
-  TABLE_WIDTH = prompt("Ширина таблицы не может быть больше 100. Пожалуйста, введите значение еще раз:");
+TABLE_WIDTH = parseInt(prompt("Ширина таблицы должна быть числом и не может быть больше 100. Пожалуйста, введите значение еще раз:"));
 }
 
-let TABLE_HEIGHT = prompt("Введите высоту таблицы (не более 100):");
-while (TABLE_HEIGHT > 100) 
+let TABLE_HEIGHT = parseInt(prompt("Введите высоту таблицы (не более 100):"));
+while (isNaN(TABLE_HEIGHT) || TABLE_HEIGHT > 100)
 {
-  TABLE_HEIGHT = prompt("Высота таблицы не может быть больше 100. Пожалуйста, введите значение еще раз:");
+TABLE_HEIGHT = parseInt(prompt("Высота таблицы должна быть числом и не может быть больше 100. Пожалуйста, введите значение еще раз:"));
 }
+
 
 let startCell = null; // Установить начальную и целевую ячейки в null и разрешить редактирование таблицы
 let targetCell = null;
