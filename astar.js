@@ -17,7 +17,7 @@ let canEditTable = true;
 let ACTIONS = {ADD_WALL: 0, REMOVE_WALL: 1, ADD_START: 2, ADD_END: 3, SELECTED: 0}; // Устанавливаеиъм доступные действия (добавление стен, удаление стен, добавление начальной или конечной точек)
 
 let Class = { // Установить классы для каждого типа ячеек
-    STRONG_WALL: 'metal',
+    // STRONG_WALL: 'metal',
     WALL: 'wall',
     START_POINT: 'start',
     END_POINT: 'end',
@@ -389,7 +389,6 @@ runBtn.onclick = function () {
 
 
 }
-
 
 clearBtn.onclick = function () {
     for (let i = 0; i < TABLE_HEIGHT; i++) {
