@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Муравейник</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.dom.min.js"></script>
+    <script src="ant.js"></script>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+          }
+          
+          .ingredients {
+            margin-right: 50px;
+            margin-top: -500px; /* добавляем отрицательный margin-top */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          
+          h2 {
+            margin-top: 0;
+          }
+          
+          img {
+            margin-right: 50px;
+            margin-top: -500px;
+            display: block;
+            margin: auto;
+            max-width: 50%; /* добавляем максимальную ширину для фото */
+          }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: hsl(207, 52%, 76%);
+            height: 50px;
+            margin: 0;
+          }
+        
+          nav ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+        
+          nav li {
+            margin: 0 10px;
+          }
+        
+          nav a {
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0 10px;
+            height: 100%;
+            transition: background-color 0.5s;
+          }
+        
+          nav a:hover {
+            background-color: #555;
+          }
+      canvas {
+        display: block;
+        margin: auto;
+        margin-left: 100px; /* Added this to move the canvas to the left */
+        margin-top: -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="base.html">База</a></li>
+          <li><a href="bonus.html">Бонус</a></li>
+          <li><a href="astar.html">A*</a></li>
+          <li><a href="clusterButton.html">Кластеризация</a></li>
+          <li><a href="gin.html">Генетический алгоритм</a></li>
+          <li><a href="astarb.html">A* Бонус</a></li>
+          <li><a href="ant.html">Муравейник</a></li>
+        </ul>
+      </nav>
+    <h1>Муравейник </h1>
+    <div id="canvas-container"></div>
+    <button id="find-button">Find Path</button>
+    <img src="https://gotovim-doma.ru/images/recipe/2/b4/2b4eb70172ed772cb9c047d9ae0dd7f5_l.jpg" alt="Delicious food">
+    <div class="ingredients">
+        <h1>ИНГРЕДИЕНТЫ</h1>
+        <ul>
+          <li>сгущенка вареная 1 банка</li>
+          <li>мед 2-3 ст.л.</li>
+          <li>орехи грецкие 100-150 г</li>
+          <li>мак 100 г</li>
+          <li>растительное масло 2-3 ст.л.</li>
+          <li>масло сливочное для теста 300 г (для крема 150 г)</li>
+          <li>сметана 150 г</li>
+          <li>мука 4 стакана</li>
+        </ul>
+
+    <script>
+      var canvas = document.createElement('canvas');
+      var container = document.querySelector('#canvas-container');
+      container.appendChild(canvas);
+
+      var ant = new Ant(canvas);
+
+      var findButton = document.querySelector('#find-button');
+      findButton.addEventListener('click', function() {
+        ant.findPath();
+      });
+    </script>
+    
+  </body>
+</html>
